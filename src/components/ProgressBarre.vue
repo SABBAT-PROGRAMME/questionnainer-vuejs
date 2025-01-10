@@ -1,9 +1,8 @@
 <!-- tamplate -->
 <template>
   <div>
-    <!-- <progress :value="value" :max="max"></progress> -->
-
-    Etape {{ value }} / {{ max }}
+    Etape {{ value + 1 }} / {{ max + 1 }}
+    <progress :value="value" :max="max" />
   </div>
 </template>
 
