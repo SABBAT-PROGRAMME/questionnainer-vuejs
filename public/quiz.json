@@ -1,0 +1,43 @@
+{
+  "title": "Questionnaire sur les Films et Séries",
+  "minimum_score": 4,
+  "success_message": "Félicitations! Vous êtes un véritable cinéphile!",
+  "failure_message": "Dommage! Vous devriez regarder plus de films et séries.",
+  "questions": [
+    {
+      "question": "Dans quel film trouve-t-on le personnage de Jack Dawson?",
+      "choices": ["Titanic", "Le Seigneur des Anneaux", "Inception", "Avatar"],
+      "correct_answer": "Titanic"
+    },
+    {
+      "question": "Quelle série met en scène le personnage de Walter White?",
+      "choices": [
+        "Breaking Bad",
+        "Stranger Things",
+        "Game of Thrones",
+        "The Walking Dead"
+      ],
+      "correct_answer": "Breaking Bad"
+    },
+    {
+      "question": "Dans quel film retrouve-t-on un anneau maléfique au centre de l'histoire?",
+      "choices": [
+        "Harry Potter",
+        "Le Seigneur des Anneaux",
+        "Star Wars",
+        "Matrix"
+      ],
+      "correct_answer": "Le Seigneur des Anneaux"
+    },
+    {
+      "question": "Quel est le nom du robot dans le film 'Interstellar'?",
+      "choices": ["HAL", "TARS", "R2-D2", "Data"],
+      "correct_answer": "TARS"
+    },
+    {
+      "question": "Quel film est basé sur une histoire vraie de survie en montagne?",
+      "choices": ["127 Heures", "Everest", "The Revenant", "Into the Wild"],
+      "correct_answer": "127 Heures"
+    }
+  ]
+}
