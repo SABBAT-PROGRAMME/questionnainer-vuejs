@@ -5,21 +5,34 @@
     <ul>
       <li v-for="(choice, index) in question.choices" :key="choice">
         <label :for="`answer-${index}`">
-          <input :id="`answer-${index}`" type="radio" name="answer" />{{
-            choice
-          }}</label
+          <input
+            :id="`answer-${index}`"
+            type="radio"
+            name="answer"
+            v-model="answer"
+            :value="choice"
+          />{{ choice }}</label
         >
       </li>
     </ul>
-    <button>Question suivante</button>
+    {{ answer }}
+    <button :disabled="answer === null" @click="emit('anwser', answer)">
+      Question suivante
+    </button>
   </div>
 </template>
 
 <!-- script -->
 <script setup>
+import { ref } from "vue";
+
 const propos = defineProps({
   question: Object,
 });
+
+const emit = defineEmits(["anwser"]);
+const answer = ref(null);
+console.log(answer);
 </script>
 
 <!-- style -->
