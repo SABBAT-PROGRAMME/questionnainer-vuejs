@@ -24,7 +24,7 @@
 
 <!-- script -->
 <script setup>
-import { ref } from "vue";
+import { ref, watch } from "vue";
 
 const propos = defineProps({
   question: Object,
@@ -33,6 +33,15 @@ const propos = defineProps({
 const emit = defineEmits(["anwser"]);
 const answer = ref(null);
 console.log(answer);
+
+// watch(
+//   () => propos.question,
+//   () => {
+//     answer.value = null;
+//   }
+// );
+// {
+// }
 </script>
 
 <!-- style -->

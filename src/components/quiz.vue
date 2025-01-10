@@ -3,12 +3,13 @@
   <h1>{{ quiz.title }}</h1>
   <ProgressBarre :value="step" :max="quiz.questions.length - 1" />
   <Question
+    :key="question.question"
     :question="question"
     v-if="state === 'question'"
     @anwser="addAnswer"
   />
 
-  <Recap v-if="state === 'recap'" />
+  <Recap v-if="state === 'recap'" :answers="answers" :quiz="quiz" />
 
   {{ answers }}
 </template>
