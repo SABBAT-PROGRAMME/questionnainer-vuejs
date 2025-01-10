@@ -1,6 +1,7 @@
 <!-- tamplate -->
 <template>
   <h1>Recap</h1>
+  <p>{{ hasWon ? quiz.success_message : quiz.failure_message }}</p>
   <p>Score : {{ score }} / {{ quiz.questions.length }}</p>
 </template>
 
@@ -25,4 +26,6 @@ const score = computed(() => {
     return acc;
   }, 0);
 });
+
+const hasWon = computed(() => score.value >= props.quiz.minimum_score);
 </script>
